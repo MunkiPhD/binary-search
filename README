@@ -1,0 +1,6 @@
+binary-search
+=================
+Just implementing binary searches in Ruby with RSpec tests
+
+includes:
+ - recursive binary search
