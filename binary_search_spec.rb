@@ -11,6 +11,11 @@ describe BinarySearch do
 	context 'recursive' do
 		it 'returns the correct value' do
 			# shouldn't write all the test cases in one test, but there's really no point to breaking it all up
+			#check for nulls
+			expect(@bs.chop(nil, [1])).to eq -1
+			expect(@bs.chop(3, nil)).to eq -1
+			
+			# and these were the test cases provided
 			expect(@bs.chop(3, [])).to eq -1	# assert_equal(-1, chop(3, []))
 
 			expect(@bs.chop(3, [1])).to eq -1 # assert_equal(-1, chop(3, [1]))
