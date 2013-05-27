@@ -47,7 +47,7 @@ class BinarySearch
 				left = midpoint + 1
 			elsif value < array[midpoint]
 				right = midpoint - 1
-			elsif value == array[midpoint]
+			else value == array[midpoint]
 				return midpoint
 			end
 
