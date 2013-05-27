@@ -14,6 +14,50 @@ class BinarySearch
 		return chop_helper(value, array, 0, array.length-1)
 	end	
 
+
+	#
+	# Iterative Binary Search
+	#		value: the value to search for
+	#		array: the array to search in
+	#
+	#		returns: The index of the value if found, -1 otherwise
+	#
+	def search(value, array)
+		# be defensive!
+		if value == nil
+			return -1
+		end
+
+		if array == nil
+			return -1
+		end
+
+		if array.empty?
+			return -1
+		end
+
+
+		right = array.length - 1
+		left = 0 # we're going to use the beginning of the array
+		midpoint = right - left
+
+
+		while (right - left) >= 0 do
+			if value > array[midpoint]
+				left = midpoint + 1
+			elsif value < array[midpoint]
+				right = midpoint - 1
+			elsif value == array[midpoint]
+				return midpoint
+			end
+
+			midpoint = ((right - left) / 2) + left
+		end
+
+		return -1
+	end
+
+
 	private 
 
 	def chop_helper(value, array, left, right)
