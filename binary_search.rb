@@ -1,6 +1,6 @@
 class BinarySearch
 
-	def chop(value, array)
+	def recursive(value, array)
 		# check for null values
 		if (value == nil) || (array == nil)
 			return -1
@@ -22,7 +22,7 @@ class BinarySearch
 	#
 	#		returns: The index of the value if found, -1 otherwise
 	#
-	def search(value, array)
+	def iterative(value, array)
 		# be defensive!
 		if value == nil
 			return -1
